@@ -165,9 +165,26 @@ const outEl = document.querySelector("#output");
 
 // console.log(totalRainfall)
 
-const words = ["The", "quick", "brown", "fox", "jumped", "over", "the", "lazy", "dog"]
+// const words = ["The", "quick", "brown", "fox", "jumped", "over", "the", "lazy", "dog"]
 
-const sentence = words.reduce((accumulator, currentValue) => accumulator + " " + currentValue);
+// const sentence = words.reduce((accumulator, currentValue) => accumulator + " " + currentValue);
 
-console.log(sentence)
+// console.log(sentence)
+
+
+//            *BIG SPENDERS
+
+// Array to contain all the big spenders
+const bigSpenders = businesses.filter(business => {
+    
+    let isaBigSpender = false;
+  
+    if (business.order >= 9000){
+        isaBigSpender = true;
+    }
+    return isaBigSpender
+});
+
+
+
 
