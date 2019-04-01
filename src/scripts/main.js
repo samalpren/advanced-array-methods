@@ -174,17 +174,23 @@ const outEl = document.querySelector("#output");
 
 //            *BIG SPENDERS
 
-// Array to contain all the big spenders
-const bigSpenders = businesses.filter(business => {
-    
-    let isaBigSpender = false;
-  
-    if (business.order >= 9000){
-        isaBigSpender = true;
-    }
-    return isaBigSpender
-});
+// //     let bigSpenderArray = [];
+// //     const biggerSpender = businesses.filter(business => {
 
+// //     business.orders.forEach(order => {
+// //         if (order > 9000) {
+// //             bigSpenderArray += order
+// //         } 
+// //  });
+//  }
+// // console.log(biggerSpenderArray);
+
+// don't know why I made it so complicated, thought I had to start with an empty array.
+
+const bigSpenders = businesses.filter(business => {
+  return business.orders.find(order => order > 9000)
+})
+console.log(bigSpenders)
 
 
 
